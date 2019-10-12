@@ -13,8 +13,12 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    //Defininação das rotas da aplicação
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
+      // O :id cria uma variavel, nesste caso a varial é :productId
+      //path o caminho do recurso a ser acessado
+      //component: component que será renderizado 
       {path:'products/:productId', component: ProductDetailsComponent}
     ])
   ],
@@ -29,9 +33,3 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 })
 export class AppModule { }
 
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/

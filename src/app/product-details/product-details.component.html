@@ -1,7 +1,9 @@
 <h2> Product Details </h2>
 
+<!-- Mostra o product caso ele exista -->
 <div *ngIf="product">
   <h3> {{ product.name }} </h3>
-  <h4> {{ product.price }} </h4>
+  <!-- | currency -> mostra o simbolo $ antes do valor e deixa em negrito o texto -->
+  <h4> {{ product.price | currency }} </h4>
   <p> {{ product.description }} </p>
 </div>
