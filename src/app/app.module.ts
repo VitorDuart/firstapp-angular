@@ -1,3 +1,5 @@
+//Importação global
+// Importação dos módulos para aplicação
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
@@ -16,12 +18,12 @@ import { ShippingComponent } from './shipping/shipping.component';
 @NgModule({
   imports: [
     BrowserModule,
-     HttpClientModule,
+    HttpClientModule,
     ReactiveFormsModule,
-    //Defininação das rotas da aplicação
+    //Definição das rotas da aplicação
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
-      // O :id cria uma variavel, nesste caso a varial é :productId
+      // O :id cria uma variavel, neste caso a varivel é :productId
       //path o caminho do recurso a ser acessado
       //component: component que será renderizado 
       { path:'products/:productId', component: ProductDetailsComponent },
