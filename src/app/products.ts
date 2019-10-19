@@ -13,5 +13,31 @@ export const products = [
     name: 'Phone Standard',
     price: 299,
     description: ''
+  },
+  {
+    name: 'Toshiba',
+    price: 2311,
+    description: 'Uma TV TOshiba'
+  },
+  {
+    name: 'Toshiba',
+    price: 2311,
+    description: 'Uma TV TOshiba'
+  },
+  {
+    name: 'Toshiba',
+    price: 2311,
+    description: 'Uma TV TOshiba'
+  },
+  {
+    name: 'Toshiba',
+    price: 2311,
+    description: 'Uma TV TOshiba'
+  },
+  {
+    name: 'Toshiba',
+    price: 2311,
+    description: 'Uma TV TOshiba'
   }
+
 ];

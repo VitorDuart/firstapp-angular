@@ -1,41 +1,42 @@
 <h2>Products</h2>
 
 <!-- 
-  *ng For itera sobre uma lista. Neste caso uma lista de produtos
+  *ngFor itera sobre uma lista. Neste caso uma lista de produtos
   a instrução é a string "let product of products; index as productId".
   Sim, eu sei. É estranho de primeira vista.
   Acuste-me. É um jeito diferente de programar. 
   Não pense como em baixo nível.
 -->
-<div *ngFor="let product of products; index as productId">
-  <h3>
-    <a [title]="product.name + 'details'"
-       [routerLink]="['/products', productId]">
-      {{product.name}}
-    </a>
-  </h3>
+<div class="list">
+  <div *ngFor="let product of products; index as productId" class="card">
+    <h3>
+      <a [title]="product.name + 'details'"
+        [routerLink]="['/products', productId]">
+        {{product.name}}
+      </a>
+    </h3>
 
-  <!-- 
-    Mostra a descriçã do produto caso o 
-    product.description != null.
-  -->
-  <p *ngIf="product.description">
-    Description: {{product.description}}
-  </p>
+    <!-- 
+      Mostra a descriçã do produto caso o 
+      product.description != null.
+    -->
+    <p *ngIf="product.description">
+      Description: {{product.description}}
+    </p>
 
-  <!--
-    Cria um component button e associa
-    a ele um evento click cujo a função que será
-    chamada sera chamada é o share().
-  -->
-  <button (click)="share()">
-    share
-  </button>
-  
-  <!-- Depois eu comento sobre issso. -->
-  <app-product-alerts 
-    [product]="product"
-    (notify)="onNotify()">
-  </app-product-alerts>
-
+    <!--
+      Cria um component button e associa
+      a ele um evento click cujo a função que será
+      chamada sera chamada é o share().
+    -->
+    <button (click)="share()">
+      share
+    </button>
+    
+    <!-- Depois eu comento sobre issso. -->
+    <app-product-alerts 
+      [product]="product"
+      (notify)="onNotify()">
+    </app-product-alerts>
+  </div>
 </div>
